@@ -8,8 +8,7 @@
 - Execute `./setup/0. initialization.sql` file in that database.
 - Seed Serial number by executing `./setup/1. seed serial numbers.sql` file in above database and you will have 100 valid serial numbers to use.
 - Build and run `./Website/Website.csproj` .project using `https` profile and you will see the website starts up at `https://localhost:7246`.
-- Admin username: `admin@contoso.com`
-- Admin password: `123456qQ@`
+- Account to view prize draw submissions: `admin@contoso.com`/`123456qQ@`
 
 # Project structure
 This project use Clean Code Architecture.

@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Valued Buyers</h1>
+</div>
+<p>
+Thank you for your unwavering support.
+We truly appreciate your trust in our products and services.
+As a token of our gratitude, we're excited to announce a special prize drawing exclusively for you.
+You can enter the draw twice for every valid serial number that you have.
+To enter the drawing and stand a chance to win exciting prizes, please fill in the form below.
+<br />
+<br />
+The deadline for submissions is @(DateTime.Now.AddDays(2)). Winners will be randomly selected and announced on September 1st 2023. We'll notify the lucky winners individually, and they'll receive their prizes soon after.
+<br />
+<br />
+Thank you for being a part of our journey and for your continued support. We look forward to serving you better in the future.
+</p>
+
+@Html.AntiForgeryToken()
+<form id="form" class="row g-3">
+    <div class="">
+      <label for="firstName" class="form-label">First name</label>
+      <input type="text" class="form-control" id="firstName" name="ownerFirstName" placeholder="" required maxlength="255">
+    </div>
+    <div class="">
+      <label for="lastName" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="lastName" name="ownerLastName" placeholder="" required maxlength="255">
+    </div>
+    <div class="">
+      <label for="age" class="form-label">Age</label>
+      <input type="number" class="form-control" id="age" name="age" placeholder="18 or above" required min="18" max="200" maxlength="255">
+    </div>
+    <div class="">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" name="ownerEmail" placeholder="name@example.com" required maxlength="254">
+    </div>
+    <div class="">
+      <label for="serialNumber" class="form-label">Product serial number</label>
+      <input type="text" class="form-control" id="serialNumber" name="productSerialNumber" placeholder="" required maxlength="38">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary ">Submit</button>
+    </div>
+
+</form>
+
+</script>
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/home.js" asp-append-version="true"></script>
+}

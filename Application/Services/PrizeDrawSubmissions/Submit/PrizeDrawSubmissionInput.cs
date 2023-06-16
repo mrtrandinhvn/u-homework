@@ -4,6 +4,9 @@ using FluentValidation;
 
 namespace Application.Services.PrizeDrawSubmissions.Submit
 {
+    /// <summary>
+    /// User submitted data from prize draw form.
+    /// </summary>
     public class PrizeDrawSubmissionInput
     {
         public required string OwnerFirstName { get; set; }
@@ -13,6 +16,9 @@ namespace Application.Services.PrizeDrawSubmissions.Submit
         public int Age { get; set; }
     }
 
+    /// <summary>
+    /// This class contains validation rules for user submitted data.
+    /// </summary>
     public class PrizeDrawSubmissionInputValidator : AbstractValidator<PrizeDrawSubmissionInput>
     {
         public PrizeDrawSubmissionInputValidator(

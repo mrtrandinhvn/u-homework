@@ -18,6 +18,7 @@ namespace Infrastructure.DataAccess
             this._cache = cache;
         }
 
+        /// <inheritdoc/>
         public async Task<bool> ExistsAsync(string serialNumber)
         {
             serialNumber = serialNumber.ToUpper(); // normalize serial number

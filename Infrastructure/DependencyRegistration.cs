@@ -9,6 +9,10 @@ namespace Infrastructure
 {
     public static class DependencyRegistration
     {
+        /// <summary>
+        /// Register dependencies for Infrastructure project.
+        /// </summary>
+        /// <param name="services"></param>
         public static void AddInfrastructure(this IServiceCollection services)
         {
             services.AddSingleton<IDataAccessCache, MemoryCache>();

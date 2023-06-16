@@ -15,6 +15,11 @@ namespace Website.Controllers
             this._readRepository = readRepository;
         }
 
+        /// <summary>
+        /// Returns submission result viewing page.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         [HttpGet("/prize-draw/submissions")]
         public async Task<IActionResult> Index(GetPaginatedSubmissionsInput input)
         {
@@ -23,7 +28,7 @@ namespace Website.Controllers
             {
                 input.Page = 1;
             }
-            
+
             if (input.PageSize == 0)
             {
                 input.PageSize = 10;

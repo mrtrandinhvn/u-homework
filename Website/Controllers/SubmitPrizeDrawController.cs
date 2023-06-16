@@ -6,6 +6,9 @@ using Website.Models;
 
 namespace Website.Controllers
 {
+    /// <summary>
+    /// This controller contains api that change the form submissions
+    /// </summary>
     [ApiController]
     public class SubmitPrizeDrawController : Controller
     {
@@ -20,6 +23,11 @@ namespace Website.Controllers
             this._mapper = mapper;
         }
 
+        /// <summary>
+        /// Api that handles the form submit.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         [HttpPost("prize-draw/submit")]
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> SubmitAsync([FromForm] PrizeDrawSubmissionRequest data)

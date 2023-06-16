@@ -6,8 +6,14 @@ using Website.Data;
 
 namespace Infrastructure.DataAccess
 {
-    public static class SeedData
+    public static class SeedUserData
     {
+        /// <summary>
+        /// Seed initial users.
+        /// </summary>
+        /// <param name="serviceProvider"></param>
+        /// <param name="testUserPw"></param>
+        /// <returns></returns>
         public static async Task Initialize(IServiceProvider serviceProvider, string testUserPw)
         {
             using (var context = new ApplicationDbContext(

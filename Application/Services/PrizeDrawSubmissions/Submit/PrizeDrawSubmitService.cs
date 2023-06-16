@@ -24,6 +24,8 @@ namespace Application.Services.PrizeDrawSubmissions.Submit
             this._writeRepository = writeRepository;
             this._mapper = mapper;
         }
+
+        /// <inheritdoc/>
         public async Task<ServiceResult> ExecuteAsync(PrizeDrawSubmissionInput input)
         {
             _logger.LogInformation("Begin PrizeDrawSubmitService");

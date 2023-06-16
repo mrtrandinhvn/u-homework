@@ -4,7 +4,10 @@ using Website.Models;
 
 namespace Website.Controllers;
 
-//[Authorize(Roles = AppRole.Admin)]
+/// <summary>
+/// This controller returns the html of the main page which includes the prize draw form submission.
+/// </summary>
+/// <returns></returns>
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -14,6 +17,10 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    /// <summary>
+    /// Returns view for home page.
+    /// </summary>
+    /// <returns></returns>
     public IActionResult Index()
     {
         return View();

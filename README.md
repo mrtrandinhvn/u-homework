@@ -6,8 +6,10 @@
 - `./Website` folder contains the code of the main website.
 - Go to `./Website/appsettings.json` and update `ConnectionStrings > DefaultConnection` to point to your empty sql server database.
 - Execute `./setup/0. initialization.sql` file in that database.
-- Seed Serial number by executing `./setup/1. seed serial numbers.sql` file in above database and you will have 100 valid serial numbers to use.
-- Build and run `./Website/Website.csproj` .project using `https` profile and you will see the website starts up at `https://localhost:7246`.
+- You can find 100 valid serial numbers to use in `./setup/1. valid serial numbers.txt`.
+- Build and run `./Website/Website.csproj` .project using `https` profile using visual studio or open a command line in the current folder and run this command: `dotnet run --project=./Website/Website.csproj --launch-profile=https`. The website should start up at `https://localhost:7246`. You may need to accept dotnet self-signed certificate or some warnings relate to https connection. Just ignore them for now.
+
+Use this account to login and read the form submissions.
 - Admin username: `admin@contoso.com`
 - Admin password: `123456qQ@`
 
